@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --ff-primary: 'Staatliches', sans-serif;
+  --ff-secondary: 'Palanquin', sans-serif;
+
+  --bg-primary: hsl(0, 0%, 85%);
+  --bg-secondary: hsl(218, 17%, 62%);
+  --bg-tertiary: hsl(233, 100%, 97%);
+  --bg-quartenary: hsl(275, 18%, 79%);
+
+  --fs-primary: 4rem;
+  --fs-secondary: 2rem;
+
+  --fc-primary: hsl(274, 84%, 12%, );
+  --fc-secondary: hsl(232, 17%, 35%, );
+}
+
+body {
+  background-color: var(--bg-primary);
+
+  font-family: var(--ff-primary);
+}
+
+.page {
+  max-width: 38.4rem;
+
+  margin: 0 auto;
+}
+
+header {
+  height: 27.9rem;
+
+  margin: 10rem auto 0;
+
+  text-align: center;
+
+  background-color: var(--bg-secondary);
+}
+
+header img {
+  margin: 3.2rem auto 0.4rem;
+}
+
+header h1 {
+  color: hsla(0, 0%, 100%, 1);
+  font-size: 4rem;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+
+  padding: 0.8rem auto;
+  
+  background-color: var(--bg-quartenary);
+  margin-bottom: 3.6rem;
+}
+
+main {
+  background-color: var(--bg-tertiary);
+
+  display: grid;
+  text-align: center;
+
+  padding: 0 auto;
+}
+
+main p {
+  width: 30.5rem;
+  font-family: var(--ff-secondary);
+  color: var(--fc-primary);
+  font-weight: 400;
+  text-align:center;
+  
+  margin: 1.4rem auto 6.3rem;
+}
+
+.card {
+  position: relative;
+  width: 32rem;
+  margin: 0 auto;
+}
+
+.card img{
+  object-fit: cover;
+
+  margin-bottom: 3.6rem;
+
+  animation: downtop 900ms 100ms backwards;
+}
+
+.card h2 {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+
+  font-size: 2rem;
+  font-weight: normal;
+  letter-spacing: 0.05rem;
+  color: #4A4E69;
+
+  border-radius: 2rem;
+  background-color: #FEEAFA;
+  width: 11.2rem;
+  height: 2.5rem;
+
+  animation: topdown  900ms 100ms;
+}
+
+@keyframes topdown {
+  0% {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  
+  50% {
+    opacity: 0.1;
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes downtop {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  
+  50% {
+    opacity: 0.1;
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
